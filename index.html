@@ -3,131 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lab3</title>
+    <title>Lab 3 - Jupiter</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
+
       body {
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        background-color: #1c1c1c;
+        color: #fff;
       }
+
       .navbar {
-        background-color: black;
-        color: white;
-        padding: 10px 20px;
+        background-color: #000;
+        padding: 15px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
-      .navbar .left,
-      .navbar .right {
-        display: flex;
-        gap: 15px;
-      }
+
       .navbar a {
-        color: white;
+        color: #fff;
         text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+        transition: color 0.3s ease;
       }
+
+      .navbar a:hover {
+        color: #00bfff;
+      }
+
       .container {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 5px;
-        flex-grow: 1;
-        padding: 5px;
-        background-color: black;
-      }
-      .box {
-        background-color: #A9A9A9;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2em;
-        font-weight: normal;
-        text-align: center;
+        grid-template-rows: 300px auto;
+        gap: 10px;
         padding: 10px;
+        flex-grow: 1;
       }
-      .box1 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-        background-image: url("C:\Users\Taranpreet Kaur\Downloads\dhf.webp");
-        background-size: cover;
-        background-position: center;
-        position: relative;
+
+      .box {
+        background-color: #2f2f2f;
+        border-radius: 8px;
+        overflow: hidden;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
       }
-      .box1 img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+
+      .box1 {
+        grid-row: 1 / 3;
+        background-image: url("https://lh3.googleusercontent.com/1w1AtWFU4ZCGMh4VnJ17AQwsj4t-Zfn0jFLpgY5DigZ4zMWRatDVh35NruBwjxy1_nmEoPKBruljke4Wjly1yNxGo2dx7qUo-g");
+        background-size: cover;
+        background-position: center;
       }
+
       .box2 {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        background-image: url("C:\Users\Taranpreet Kaur\Downloads\dhf.webp");
+        background-image: url("https://sm.mashable.com/t/mashable_in/photo/default/jupiter-auroras_u9v9.1248.jpg");
         background-size: cover;
         background-position: center;
-        position: relative;
       }
-      .box2 img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
+
       .box3 {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-        background-image: url("C:\Users\Taranpreet Kaur\Downloads\dhf.webp");
+        background-image: url("https://www.mdr.de/wissen/jupiter-saturn-mond-104-resimage_v-variantBig16x9_w-832.jpg?version=53864");
         background-size: cover;
         background-position: center;
-        position: relative;
       }
-      .box3 img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
+
       .box4 {
         grid-column: 2 / 4;
-        grid-row: 2 / 3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
+        background-color: #3a3a3a;
+        padding: 20px;
+        text-align: justify;
+        font-size: 1rem;
+        line-height: 1.6;
         overflow-y: auto;
-        padding: 15px;
-        text-align: left;
-        height: 100%;
-        max-height: 50vh;
-        scrollbar-width: thin;
-        scrollbar-color: #ccc #666;
+        max-height: 250px;
+        border-radius: 8px;
       }
+
       .box4::-webkit-scrollbar {
         width: 8px;
       }
+
       .box4::-webkit-scrollbar-track {
-        background: #666;
+        background: #444;
       }
+
       .box4::-webkit-scrollbar-thumb {
-        background: #ccc;
+        background-color: #888;
         border-radius: 4px;
       }
+
       .footer {
-        background-color: black;
-        color: white;
+        background-color: #000;
+        color: #fff;
         text-align: center;
-        padding: 10px;
+        padding: 15px;
+        font-size: 0.9rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(4, auto);
+        }
+
+        .box1 {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+          height: 300px;
+        }
+
+        .box2,
+        .box3 {
+          height: 200px;
+        }
+
+        .box4 {
+          grid-column: 1 / 2;
+        }
       }
     </style>
   </head>
+
   <body>
     <div class="navbar">
       <div class="left">
@@ -140,21 +146,17 @@
         <a href="#">Sign Up</a>
       </div>
     </div>
+
     <div class="container">
-      <div class="box box1">
-        <img src="C:\Users\Taranpreet Kaur\Downloads\Screenshots\Screenshot 2025-05-29 185229.png" alt="Rocket" />
-      </div>
-      <div class="box box2">
-        <img src="C:\Users\Taranpreet Kaur\Downloads\Screenshots\Screenshot 2025-05-29 185127.png"/>
-      </div>
-      <div class="box box3">
-        <img src="C:\Users\Taranpreet Kaur\Downloads\Screenshots\Screenshot 2025-05-29 184949.png" alt="Rover" />
-      </div>
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
       <div class="box box4">
-     SACE (South Australian Certificate of Education) is a qualification that students in South Australia work towards in Years 11 and 12. It helps them gain the skills and knowledge needed for further study, work, or training. SACE includes subjects in areas like English, Maths, Science, and the Arts. Students must complete a certain number of credits, including compulsory subjects like the Research Project. SACE encourages independent learning and problem-solving, helping students get ready for life after school.
+        NASA’s upcoming Jupiter mission, **Europa Clipper**, is set to launch in **October 2024** with the goal of exploring **Europa**, one of Jupiter’s largest and most intriguing moons. Scientists believe Europa may harbor a subsurface ocean beneath its icy crust, making it a prime candidate in the search for extraterrestrial life. The spacecraft will not land but will orbit Jupiter and conduct nearly **50 close flybys** of Europa, capturing high-resolution images and analyzing its ice shell, surface chemistry, and potential water plumes. Equipped with advanced instruments like ice-penetrating radar, spectrometers, and magnetometers, Europa Clipper will investigate whether the moon’s ocean could support life. The mission builds on earlier data from the Galileo spacecraft and aims to answer critical questions about habitability beyond Earth. Once launched aboard a SpaceX Falcon Heavy rocket, it is expected to arrive at Jupiter by **2030**. Europa Clipper marks a significant milestone in planetary science, deepening our understanding of icy worlds and ocean-bearing moons. If successful, it may lay the groundwork for a future lander mission and bring us closer to answering the age-old question: Are we alone in the universe?
 
-
+              </div>
     </div>
-     <div class="footer">&copy; 2025 Taranpreet kaur. All rights reserved</div>
+
+    <div class="footer">&copy; 2025 Taranpreet Kaur. All rights reserved.</div>
   </body>
 </html>
