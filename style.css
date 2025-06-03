@@ -51,13 +51,13 @@ body {
 
 .box1 {
   grid-row: 1 / 3;
-  background-image: url("https://lh3.googleusercontent.com/1w1AtWFU4ZCGMh4VnJ17AQwsj4t-Zfn0jFLpgY5DigZ4zMWRatDVh35NruBwjxy1_nmEoPKBruljke4Wjly1yNxGo2dx7qUo-g");
+  background-image: url("1__images.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .box2 {
-  background-image: url("https://sm.mashable.com/t/mashable_in/photo/default/jupiter-auroras_u9v9.1248.jpg");
+  background-image: url("2__images.jpg");
   background-size: cover;
   background-position: center;
 }
